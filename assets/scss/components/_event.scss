@@ -1,0 +1,85 @@
+.xb-event {
+    background: linear-gradient(335deg, #435fb2 0%, #111b5e 66.48%, #0c1449 100%);
+    border-radius: 20px;
+    border: 1px solid #6780D2;
+    .xb-item {
+        &--img {
+            text-align: center;
+            border-bottom: 1px solid #6780D2;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            img {
+                @include transition (.4s);
+            }
+        }
+        &--holder {
+            padding: 25px 30px 28px 30px;
+        }
+        &--location {
+            font-weight: 500;
+            span {
+                padding-left: 12px;
+            }
+        }
+        &--title {
+            font-size: 22px;
+            line-height: 34px;
+            letter-spacing: -0.03px;
+            padding: 15px 0;
+            @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                font-size: 18px;
+                line-height: 30px;
+            }
+            @include respond(lg) {
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0;
+            }
+            a {
+                color: currentColor;
+            }
+        }
+        &--date-time1 {
+            display: flex;
+            align-items: center;
+            span {
+                padding-left: 8px;
+            }
+        }
+        &--date {
+            padding-right: 10px;
+        }
+        &--event-btn {
+            padding-top: 30px;
+            .them-btn {
+                width: 100%;
+                height: 50px;
+                padding: 0;
+                background: #0a0718;
+                color: #fff;
+                border: 1px solid #7bd6ff;
+                &:hover {
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary);
+                    color: #0a0718;
+                    .btn_icon svg path {
+                        fill: #0a0718;
+                    }
+
+                }
+                .btn_icon svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &:hover {
+        .xb-item {
+            &--img {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

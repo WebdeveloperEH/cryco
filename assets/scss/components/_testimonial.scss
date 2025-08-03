@@ -1,0 +1,242 @@
+.xb-review {
+    border-top: 1px solid #2a284b;
+    padding-bottom: 40px;
+    .xb-item {
+        &--holder {
+            padding-top: 35px;
+            padding-bottom: 14px;
+            &:not(:last-child) {
+                border-right: 1px solid #2a284b;
+                padding-right: 181px;
+                @include respond(md) {
+                    padding-right: 0;
+                    border: none;
+                }
+            }
+        }
+        &--review {
+            padding-left: 20px;
+            span {
+                font-weight: 500;
+            }
+        }
+        &--star {
+            display: flex;
+            align-items: center;
+            margin-bottom: -4px;
+            span {
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--color-white);
+                padding-left: 8px;
+            }
+        }
+    }
+}
+.xb-testimonial-wrap {
+    align-items: start;
+    padding: 65px 0 65px 0;
+    background: #151246;
+    border-radius: 20px;
+    position: relative;
+    @include respond(md) {
+        padding: 40px 20px;
+    }
+    &::before {
+        content: '';
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        padding: 1px;
+        height: 100%;
+        position: absolute;
+        border-radius: 20px;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: add, add;
+        mask-composite: add, add;
+        -webkit-mask-composite: source-out;
+        mask-composite: exclude;
+        background: linear-gradient(162deg, #8f7bff 0%, #413886 28.35%, #0f0d39 73.81%, #2dd98f 100%);
+    }
+    .xb-item {
+        &--author {
+            width: 37.5%;
+            padding-top: 15px;
+            @include respond(md) {
+                width: 25%;
+            }
+            @include respond(xs) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        &--avater {
+            img {
+                border-radius: 100%;
+            }
+        }
+        &--nationality {
+            padding-top: 15px;
+            span {
+                padding-left: 8px;
+            }
+        }
+        &--title {
+            font-size: 22px;
+            line-height: 34px;
+            letter-spacing: -0.03px;
+            padding-top: 8px;
+            padding-bottom: 4px;
+            @include respond(md) {
+                font-size: 17px;
+            }
+        }
+        &--content {
+            width: calc(100% - 37.5%);
+            position: relative;
+            padding-left: 40px;
+            @include respond(md) {
+                width: calc(100% - 25%);
+                padding-left: 20px;
+            }
+            @include respond(xs) {
+                width: 100%;
+                padding-left: 0;
+            }
+            p {
+                font-size: 26px;
+                line-height: 36px;
+                padding: 0 0 36px 60px;
+                max-width: 690px;
+                @include respond(md) {
+                    font-size: 20px;
+                }
+                @include respond(xs) {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+            &::before {
+                content: '';
+                height: 24px;
+                width: 32px;
+                position: absolute;
+                background: url(../img/testimonial/tes-qutation.png);
+                top: 10px;
+            }
+        }
+        &--reating {
+            padding-left: 60px; 
+            span {
+                font-size: 18px;
+                font-weight: 600;
+                padding: 0 6px 0 20px;
+                color: #fff;
+            }
+        }
+    }
+}
+.testimonial-two {
+    background: #0d0b33;
+    margin: 0 20px;
+    border-radius: 20px;
+    z-index: 1;
+    &::after, &::before {
+        content: '';
+        height: 673px;
+        width: 512px;
+        position: absolute;
+        border-radius: 100%;
+        background: #fff;
+        filter: blur(400px);
+        z-index: -1;
+        top: 28%;
+    }
+    &::after {
+        left: -135px;
+    }
+    &::before {
+        right: -135px;
+    }
+    .tes-shape {
+        @include respond(md) {
+            display: none;
+        }
+        .shape {
+            position: absolute;
+            &--2 {
+                left: 35px;
+                bottom: 0;
+            }
+            &--3 {
+                right: 30px;
+                bottom: 0;
+            }
+            &--4 {
+                bottom: 29%;
+                left: 43px;
+            }
+            &--5 {
+                bottom: 15%;
+                right: 65px;
+            }
+        }
+    }
+}
+.xb-integrate {
+    margin: 0 -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .image {
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0d0b33;
+        position: absolute;
+        top: 31.5%;
+        left: 45.1%;
+        @include respond(md) {
+            height: 100px;
+            width: 100px;
+            top: 26.5%;
+            left: 43.1%;
+            img {
+                max-width: 50px;
+            }
+        }
+        @include respond(xs) {
+            height: 60px;
+            width: 60px;
+            top: 25.5%;
+            left: 42.1%;
+            img {
+                max-width: 30px;
+            }
+        }
+        &::before {
+            content: '';
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            padding: 1px;
+            height: 100%;
+            position: absolute;
+            border-radius: 100%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: add, add;
+            mask-composite: add, add;
+            -webkit-mask-composite: source-out;
+            mask-composite: exclude;
+            background: linear-gradient(162deg, #8f7bff 0%, #413886 28.35%, #0f0d39 73.81%, #2dd98f 100%);
+            animation: spin 5s infinite linear;
+            -webkit-animation: spin 5s infinite linear;
+        }
+    }
+}

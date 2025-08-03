@@ -1,0 +1,116 @@
+.process {
+    @include respond(lg) {
+        margin-bottom: 90px;
+    }
+}
+.xb-process {
+    &.process-line {
+        &::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 970px;
+            left: 133px;
+            top: 182px;
+            background: linear-gradient(90deg, #080b18 25.3%, #fff 29.39%, #080b18 33.43%, #080b18 70.52%, #fff 74.43%, #080b18 78.57%);
+            @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+                width: 899px;
+                left: 118px;
+                top: 182px;
+            }
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 158px;
+        left: 84%;
+        top: 42%;
+        background-image: url(../img/shape/prc_line.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+    .xb-item {
+        &--icon {
+            text-align: center;
+            margin-bottom: 65px;
+        }
+        &--shape {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 27%;
+            z-index: -1;
+            @include respond(md) {
+                width: 60%;
+                margin: auto;
+            }
+            @include respond(xs) {
+                width: 100%;
+            }
+            svg {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        &--holder {
+            text-align: center;
+            bottom: 68px;
+            padding: 0 90px;
+            @include respond(laptop) {
+                padding: 0 75px;
+            }
+            @include respond(lg) {
+                bottom: 47px;
+                padding: 0px 62px;
+            }
+        }
+        &--title {
+            font-size: 26px;
+            letter-spacing: -0.02px;
+            text-transform: capitalize;
+            padding-bottom: 17px;
+            @include respond(laptop) {
+                font-size: 22px;
+            }
+            @include respond(lg) {
+                font-size: 20px;
+            }
+        }
+        &--content {
+            line-height: 24px;
+            display: inline-block;
+            max-width: 230px;
+            @include respond(lg) {
+                font-size: 14px;
+            }
+            @include respond(lg) {
+                font-size: 16px;
+            }
+        }    
+    }
+}
+.process-col:last-child {
+    .xb-process {
+        &::before {
+            display: none;
+        }
+    }
+}
+@include respond(lg) {
+    .process-col:nth-child(2) .xb-process::before {
+        display: none;
+    }
+}
+@include respond(md) {
+    .process-col .xb-process::before {
+        display: none;
+    }
+}
+.mt-none-130 {
+    margin-top: -130px;
+}

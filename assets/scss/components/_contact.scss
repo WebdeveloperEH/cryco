@@ -1,0 +1,71 @@
+.contact-info {
+    &__item {
+        background-color: #1D1D3E;
+        @include border-radius(20px);
+        padding: 60px 60px 55px;
+        background-image: url(../img/shape/c_info_bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+        position: relative;
+        @include respond(lg) {
+            padding: 50px 35px;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #333159;
+            @include border-radius(50%);
+            @include center;
+            margin: 0 auto 26px;
+            background: linear-gradient(334deg, #6780d2 0%, #2f3b8d 100%);
+            background-image: url(../img/shape/icon_bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 34px;
+            color: #C1C7DE;
+            text-align: center;
+            font-family: var(--font-heading);
+            @include respond(lg) {
+                font-size: 21px;
+                line-height: 32px;
+            }
+            a {
+                color: currentColor;
+            }
+        }
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.google-map {
+    &__inner {
+        height: 950px;
+        margin-bottom: -350px;
+        @include respond(lg) {
+            height: 600px;
+            margin-bottom: -200px;
+        }
+        @include respond(md) {
+            height: 500px;
+            margin-bottom: -150px;
+        }
+        iframe {
+            height: 100%;
+            width: 100%;
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }
+    }
+}
